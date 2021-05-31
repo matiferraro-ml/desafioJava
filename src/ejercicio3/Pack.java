@@ -2,8 +2,27 @@ package ejercicio3;
 
 import java.util.List;
 
-public class Pack extends Componente {
+public class Pack implements iComponente {
 
-    private List<Componente> componentes;
+    private List<FuegoArtificial> fuegosArtificiales;
+
+    public Pack(List<FuegoArtificial> fuegosArtificiales) {
+        this.fuegosArtificiales = fuegosArtificiales;
+    }
+
+    @Override
+    public void explotar() {
+        for(FuegoArtificial fa : fuegosArtificiales) {
+            fa.explotar();
+        }
+    }
+
+    public List<FuegoArtificial> getFuegosArtificiales() {
+        return fuegosArtificiales;
+    }
+
+    public void setFuegosArtificiales(List<FuegoArtificial> fuegosArtificiales) {
+        this.fuegosArtificiales = fuegosArtificiales;
+    }
 
 }

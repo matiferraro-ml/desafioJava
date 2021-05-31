@@ -8,6 +8,10 @@ public class Persona {
         this.nombre = nombre;
     }
 
+    public boolean apagarVelas() {
+        return true;
+    }
+
     public String getNombre() {
         return nombre;
     }
